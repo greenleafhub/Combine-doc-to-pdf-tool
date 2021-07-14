@@ -1,4 +1,4 @@
-   #! python3
+ #! python3
    # combinepdf.py - Combines all the PDFs in the current working directory into
    # into a single PDF.
 
@@ -18,9 +18,9 @@ for filename in pdfFiles:
     pdfFileObj = open(filename, 'rb')
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 # Create the blank page located in the same directory.
-    if filename.startswith('blank'):
+    if filename.startswith('000_blank'):
         blank = pdfReader.getPage(0)
-    if not filename.startswith('blank'):
+    if not filename.startswith('000_blank'):
         print('Opened ',filename)
 # Loop through all the pages and add them.
         for pageNum in range(pdfReader.numPages):
@@ -36,8 +36,7 @@ for filename in pdfFiles:
 
 
 # Save the resulting PDF to a file.
-pdfOutput = open('allminutes.pdf', 'wb')
+pdfOutput = open('combinied.pdf', 'wb')
 pdfWriter.write(pdfOutput)
 pdfOutput.close()
 print('Combined all to allminutes.pdf \o/')
-
