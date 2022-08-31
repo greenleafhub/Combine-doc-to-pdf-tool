@@ -1,10 +1,12 @@
-How this works:
-1. Install docx2pdf, pypiwin32, PyPDF2 beforehand
+#How this works:
+1. Install docx2pdf, pypiwin32, PyPDF2 beforehand 
+(type in CMD and press enter: py -m pip install [insert package name here])
 2. Put the code in the same directory with all files need to combine  (can be doc, docx, pdf format)
-3. put a blank pdf file starting with '000_blank' in the same directory (for adding blank pages for odd number pages)
-4. Run the code and profit \o/
+3. Put a blank pdf file starting with '000_blank' in the same directory (for adding blank pages for odd number pages)
+4. Rename the files you want to combine with the order you want them in (e.g. '1_intro', '2_map', etc)
+5. Run the code and profit \o/
 
-What it does:
+#What it does:
 1. turn doc to docx
 2. docx to pdf
 3. combine all pdf, add a blank page if pdf has odd number pages for easy printing
